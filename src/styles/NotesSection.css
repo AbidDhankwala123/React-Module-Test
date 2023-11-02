@@ -1,0 +1,48 @@
+.heading {
+    margin: 20px 0 0 10px;
+    font-family: var(--font-family-roboto);
+}
+
+.create-notes-section>button {
+    cursor: pointer;
+    border: none;
+    background-color: black;
+    border-radius: 50px;
+    color: white;
+    padding: 0.5rem 3rem;
+    font-family: var(--font-family-roboto);
+    font-size: 18px;
+    letter-spacing: 0.5px;
+    margin-top: 30px;
+    margin-left: 50px;
+}
+.plus-btn{
+    font-weight: bold;
+    font-size: 25px;
+}
+.create-notes-section>div {
+    margin-left: 50px;
+    overflow: auto;
+}
+
+.notes {
+    margin-top: 20px;
+}
+
+.notes>span {
+    display: inline-block;
+    height: 50px;
+    width: 50px;
+    padding-top: 15px;
+    padding-left: 12px;
+    margin-right: 20px;
+    color: white;
+    background-color: #0047FF;
+    border-radius: 50%;
+    font-family: var(--font-family-roboto);
+}
+
+.notes>strong {
+    font-family: var(--font-family-roboto);
+    letter-spacing: 0.4px;
+}

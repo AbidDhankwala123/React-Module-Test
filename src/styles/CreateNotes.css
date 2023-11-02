@@ -1,0 +1,62 @@
+.popup-section {
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+    position: relative;
+}
+
+.popup-section>h3,
+.popup-section>div>strong {
+    font-family: var(--font-family-roboto);
+}
+
+.popup-section>div>input {
+    margin-left: 20px;
+    padding-left: 10px;
+    width: 300px;
+    height: 35px;
+    border-radius: 22px;
+    border: 2px solid #CCC;
+    background: #FFF;
+    font-family: var(--font-family-roboto);
+    letter-spacing: 0.8px;
+}
+.colors{
+    display: inline-block;
+
+    border-radius: 50%;
+    height: 25px;
+    width: 25px;
+    margin-left: 10px;
+}
+.color1{
+    background-color: #B38BFA;
+}
+.color2{
+    background-color: #FF79F2;
+}
+.color3{
+    background-color: #43E6FC;
+}
+.color4{
+    background-color: #F19576;
+}
+.color5{
+    background-color: #0047FF;
+}
+.color6{
+    background-color: #6691FF;
+}
+.popup-section>button{
+    cursor: pointer;
+    border: none;
+    background-color: black;
+    border-radius: 10px;
+    color: white;
+    padding: 0.5rem 2rem;
+    font-family: var(--font-family-roboto);
+    letter-spacing: 0.5px;
+    position: absolute;
+    bottom: 10px;
+    right: 10px;
+}

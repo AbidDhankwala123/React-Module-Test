@@ -1,0 +1,35 @@
+.right-banner {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.right-banner>.notes-img {
+    width: 550px;
+    height: 250px;
+}
+
+.pocket {
+    font-family: var(--font-family-roboto);
+    font-size: 32px;
+    letter-spacing: 1px;
+}
+
+.text ,.lock-text{
+    margin-top: 10px;
+    color: #292929;
+    font-family: var(--font-family-roboto);
+    width: 500px;
+    line-height: 22px;
+    letter-spacing: 0.4px;
+}
+.right-banner>div{
+    position: absolute;
+    bottom: 10px;
+}
+.lock-text{
+    position: relative;
+    bottom: 3px;
+    left: 5px;
+}
