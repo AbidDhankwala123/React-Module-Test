@@ -1,8 +1,7 @@
 import React, { useEffect } from 'react'
 import "../styles/NotesSection.css"
 
-const NotesSection = ({setVisible,groupName,bgColor}) => {
-
+const NotesSection = ({setVisible,groupName}) => {
 
     function displayNotesName(){
         setVisible(true);
@@ -19,7 +18,6 @@ const NotesSection = ({setVisible,groupName,bgColor}) => {
                 {groupName.map((name,idx) => {
                     return(
                         <div key={idx} className='notes'>
-                            {console.log(bgColor)}
                             <span style={{backgroundColor:name.bgColor}}>{name.inputText.slice(0,2)}</span>
                             <strong>{name.inputText}</strong>
                         </div>

@@ -53,3 +53,9 @@
     font-family: var(--font-family-roboto);
     letter-spacing: 0.4px;
 }
+
+@media screen and (max-width:500px) {
+    .notes-section-container{
+        width: 100%;
+    }
+}
