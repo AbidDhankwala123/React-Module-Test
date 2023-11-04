@@ -1,31 +1,53 @@
-import React from 'react'
+import React, { useEffect } from 'react'
 import "../styles/CreateNotes.css"
 
-const CreateNotes = () => {
+const CreateNotes = ({bgColor,setBgColor, visible, setVisible, inputText, setInputText, groupName, setGroupName }) => {
+
+  
+  function createNotes() {
+    setInputText("");
+    setVisible(false);
+    if(inputText.length == 0){
+      setVisible(true);
+    }
+    else{
+      setGroupName([...groupName, {inputText:inputText,bgColor:bgColor}]);
+    }
+    // setInputText("");
+    // setVisible(false);
+    console.log(groupName);
+  }
+// useEffect(createNotes,[groupName])
+  
+  
+  
   return (
-    <div style={{height:"100vh",background: "rgba(0, 0, 0, 0.5)",display:"flex",justifyContent:"center",alignItems:"center",position:"absolute",top:"0",width:"100%"}}>
-      <div style={{backgroundColor:"white",height:"200px",width:"500px",padding:"20px"}} className='popup-section'>
-
-        <h3>Create New Notes Group</h3>
+    <>
+      {visible && <div className='create-notes-container'>
         
-        <div>
+        <div className='popup-section'>
+
+          <h3>Create New Notes Group</h3>
+
+          <div>
             <strong>Group Name</strong>
-            <input type="text" placeholder='Enter your group name....' />
-        </div>
+            <input type="text" placeholder='Enter your group name....' value={inputText} onChange={(e) => setInputText(e.target.value)} />
+          </div>
 
-        <div>
+          <div>
             <strong>Choose colour</strong>
-            <span className='colors color1'></span>
-            <span className='colors color2'></span>
-            <span className='colors color3'></span>
-            <span className='colors color4'></span>
-            <span className='colors color5'></span>
-            <span className='colors color6'></span>
-        </div>
+            <span className='colors color1' onClick={() => setBgColor("#B38BFA")}></span>
+            <span className='colors color2' onClick={() => setBgColor("#FF79F2")}></span>
+            <span className='colors color3' onClick={() => setBgColor("#43E6FC")}></span>
+            <span className='colors color4' onClick={() => setBgColor("#F19576")}></span>
+            <span className='colors color5' onClick={() => setBgColor("#0047FF")}></span>
+            <span className='colors color6' onClick={() => setBgColor("#6691FF")}></span>
+          </div>
 
-        <button>Create</button>
-      </div>
-    </div>
+          <button onClick={createNotes}>Create</button>
+        </div>
+      </div>}
+    </>
   )
 }
 

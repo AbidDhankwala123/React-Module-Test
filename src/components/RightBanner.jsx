@@ -5,7 +5,7 @@ import "../styles/RightBanner.css"
 
 const RightBanner = () => {
   return (
-    <div style={{ width: "70vw", backgroundColor: "#F7ECDC" }} className='right-banner'>
+    <div className='right-banner'>
       <img src={image} alt={image} className='notes-img' />
 
       <p className='pocket'>Pocket Notes</p>

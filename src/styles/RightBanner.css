@@ -1,4 +1,6 @@
 .right-banner {
+    width: 70vw; 
+    background-color: #F7ECDC;
     display: flex;
     flex-direction: column;
     justify-content: center;

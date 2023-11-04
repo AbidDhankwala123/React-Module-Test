@@ -1,59 +1,32 @@
-import React from 'react'
+import React, { useEffect } from 'react'
 import "../styles/NotesSection.css"
 
-const NotesSection = () => {
+const NotesSection = ({setVisible,groupName,bgColor}) => {
+
+
+    function displayNotesName(){
+        setVisible(true);
+    }
   return (
-    <div style={{width:"30vw"}}>
+    <div className='notes-section-container' >
         <h3 className='heading'>Pocket Notes</h3>
         <div className='create-notes-section'>
-            <button><span className='plus-btn'>+</span> Create Notes group</button>
+            <button onClick={displayNotesName}><span className='plus-btn'>+</span> Create Notes group</button>
             <div>
                 {/*  style={{backgroundColor:"#F7ECDC",borderRadius:"20px 0 0 20px",padding:"10px 20px"}}*/}
                 
-                <div className='notes' >
-                    <span>CU</span>
-                    <strong>Cuvette Notes</strong>
-                </div>
-                {/* <div className='notes' style={{backgroundColor:"#F7ECDC",borderRadius:"20px 0 0 20px",padding:"10px 20px"}}>
-                    <span>CU</span>
-                    <strong>Cuvette Notes</strong>
-                </div>
-                <div className='notes' style={{backgroundColor:"#F7ECDC",borderRadius:"20px 0 0 20px",padding:"10px 20px"}}>
-                    <span>CU</span>
-                    <strong>Cuvette Notes</strong>
-                </div>
-                <div className='notes' style={{backgroundColor:"#F7ECDC",borderRadius:"20px 0 0 20px",padding:"10px 20px"}}>
-                    <span>CU</span>
-                    <strong>Cuvette Notes</strong>
-                </div>
-                <div className='notes' style={{backgroundColor:"#F7ECDC",borderRadius:"20px 0 0 20px",padding:"10px 20px"}}>
-                    <span>CU</span>
-                    <strong>Cuvette Notes</strong>
-                </div>
-                <div className='notes' style={{backgroundColor:"#F7ECDC",borderRadius:"20px 0 0 20px",padding:"10px 20px"}}>
-                    <span>CU</span>
-                    <strong>Cuvette Notes</strong>
-                </div>
-                <div className='notes' style={{backgroundColor:"#F7ECDC",borderRadius:"20px 0 0 20px",padding:"10px 20px"}}>
-                    <span>CU</span>
-                    <strong>Cuvette Notes</strong>
-                </div>
-                <div className='notes' style={{backgroundColor:"#F7ECDC",borderRadius:"20px 0 0 20px",padding:"10px 20px"}}>
-                    <span>CU</span>
-                    <strong>Cuvette Notes</strong>
-                </div>
-                <div className='notes' style={{backgroundColor:"#F7ECDC",borderRadius:"20px 0 0 20px",padding:"10px 20px"}}>
-                    <span>CU</span>
-                    <strong>Cuvette Notes</strong>
-                </div>
-                <div className='notes' style={{backgroundColor:"#F7ECDC",borderRadius:"20px 0 0 20px",padding:"10px 20px"}}>
-                    <span>CU</span>
-                    <strong>Cuvette Notes</strong>
-                </div>
-                <div className='notes' style={{backgroundColor:"#F7ECDC",borderRadius:"20px 0 0 20px",padding:"10px 20px"}}>
-                    <span>CU</span>
-                    <strong>Cuvette Notes</strong>
-                </div> */}
+                
+                {groupName.map((name,idx) => {
+                    return(
+                        <div key={idx} className='notes'>
+                            {console.log(bgColor)}
+                            <span style={{backgroundColor:name.bgColor}}>{name.inputText.slice(0,2)}</span>
+                            <strong>{name.inputText}</strong>
+                        </div>
+                    )
+                })}
+                
+                
             </div>
         </div>
     </div>

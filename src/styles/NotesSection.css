@@ -1,3 +1,6 @@
+.notes-section-container{
+    width: 30vw;
+}
 .heading {
     margin: 20px 0 0 10px;
     font-family: var(--font-family-roboto);
@@ -21,6 +24,7 @@
     font-size: 25px;
 }
 .create-notes-section>div {
+    height:80vh;
     margin-left: 50px;
     overflow: auto;
 }
@@ -31,15 +35,18 @@
 
 .notes>span {
     display: inline-block;
+    text-transform: uppercase;
     height: 50px;
     width: 50px;
     padding-top: 15px;
     padding-left: 12px;
     margin-right: 20px;
     color: white;
-    background-color: #0047FF;
+    background-color: black;
     border-radius: 50%;
     font-family: var(--font-family-roboto);
+    letter-spacing: 2px;
+    font-size: 18px;
 }
 
 .notes>strong {

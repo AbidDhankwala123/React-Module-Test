@@ -1,4 +1,19 @@
+.create-notes-container{
+    height: 100vh;
+    z-index:2;
+    background: rgba(0, 0, 0, 0.5); 
+    display: flex; 
+    justify-content: center; 
+    align-items: center; 
+    position: absolute;
+    top: 0;
+    width: 100%; 
+}
 .popup-section {
+    background-color: white;
+    height: 200px;
+    width: 500px;
+    padding: 20px;
     display: flex;
     flex-direction: column;
     gap: 1.5rem;
@@ -22,12 +37,15 @@
     letter-spacing: 0.8px;
 }
 .colors{
+    cursor: pointer;
     display: inline-block;
-
     border-radius: 50%;
     height: 25px;
     width: 25px;
     margin-left: 10px;
+}
+.colors:hover{
+    border: 2px solid black;
 }
 .color1{
     background-color: #B38BFA;
