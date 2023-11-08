@@ -9,7 +9,7 @@ const RightBanner = () => {
       <img src={image} alt={image} className='notes-img' />
 
       <p className='pocket'>Pocket Notes</p>
-      
+
       <p className='text'>Send and receive messages without keeping your phone online.
         Use Pocket Notes on up to 4 linked devices and 1 mobile phone</p>
 

@@ -1,5 +1,5 @@
 .right-banner {
-    width: 70vw; 
+    width: 70vw;
     background-color: #F7ECDC;
     display: flex;
     flex-direction: column;
@@ -8,35 +8,39 @@
 }
 
 .right-banner>.notes-img {
-    width: 550px;
-    height: 250px;
+    width: 34.4rem;
+    height: 15.7rem;
 }
 
 .pocket {
     font-family: var(--font-family-roboto);
-    font-size: 32px;
+    font-size: 2rem;
     letter-spacing: 1px;
 }
 
-.text ,.lock-text{
+.text,
+.lock-text {
     margin-top: 10px;
     color: #292929;
     font-family: var(--font-family-roboto);
-    width: 500px;
-    line-height: 22px;
+    width: 31.3rem;
+    line-height: 1.4rem;
     letter-spacing: 0.4px;
 }
-.right-banner>div{
+
+.right-banner>div {
     position: absolute;
     bottom: 10px;
 }
-.lock-text{
+
+.lock-text {
     position: relative;
     bottom: 3px;
     left: 5px;
 }
+
 @media screen and (max-width:500px) {
-    .right-banner{
-       display: none;
+    .right-banner {
+        display: none;
     }
 }

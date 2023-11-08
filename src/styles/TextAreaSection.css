@@ -1,24 +1,27 @@
-.textarea-section-container{
-    height:100vh;
-    width:70vw;
-    background-color:#E8E8E8;
-    position:absolute;
-    right:0;
-    top:0;
+.textarea-section-container {
+    height: 100vh;
+    width: 70vw;
+    background-color: #E8E8E8;
+    position: absolute;
+    right: 0;
+    top: 0;
 }
+
 .textarea-container {
     position: absolute;
     bottom: 10px;
-    left: 30px;
+    left: 1.9rem;
 
 }
-.display-texts{
-    background-color:#F7ECDC;
-    padding:20px;
-    margin-top:10px;
-    height:60vh;
-    overflow:auto;
+
+.display-texts {
+    background-color: #F7ECDC;
+    padding: 1.3rem;
+    margin-top: 10px;
+    height: 53vh;
+    overflow: auto;
 }
+
 .textarea-container>textarea {
     padding: 10px;
     border-radius: 10px;
@@ -29,11 +32,12 @@
     height: 25vh;
     box-shadow: 0 0 5px black;
     font-family: var(--font-family-roboto);
-    font-size: 20px;
+    font-size: 1.3rem;
     letter-spacing: 0.6px;
 }
 
 .rightarrow-img {
+    cursor: pointer;
     position: absolute;
     bottom: 10px;
     right: 8px;
@@ -42,23 +46,44 @@
 .textarea-notes {
     margin-left: 10px;
 }
-.left-arrow{
+
+.left-arrow {
     cursor: pointer;
     display: none;
     margin-right: 10px;
 }
+
 .display-texts>div {
     margin-top: 10px;
 }
 
 .time-date {
     font-family: var(--font-family-roboto);
-    width: 10vw;
-    display: inline-block;
+    width: 11vw;
 }
 
 .para {
     font-family: var(--font-family-roboto);
     line-height: 160.188%;
     letter-spacing: 0.63px;
+}
+
+@media screen and (max-width:500px) {
+    .textarea-section-container {
+        width: 100%;
+        position: absolute;
+        top: 0;
+    }
+
+    .left-arrow {
+        display: inline;
+    }
+
+    .textarea-container>textarea {
+        width: 90vw;
+    }
+
+    .time-date {
+        width: 28vw;
+    }
 }

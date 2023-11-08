@@ -1,34 +1,38 @@
-import React, { useEffect } from 'react'
+import React, { useState } from 'react'
 import "../styles/NotesSection.css"
 
-const NotesSection = ({setVisible,groupName}) => {
+const NotesSection = ({ notesBgColor, setNotesBgColor, setNoteId, setActive, setVisible, groupName, setTextInput, setTextSlice, setTextBgColor }) => {
 
-    function displayNotesName(){
+    const [selectedNote, setSelectedNote] = useState(null);
+
+    const displayNotesName = () => {
         setVisible(true);
     }
-  return (
-    <div className='notes-section-container' >
-        <h3 className='heading'>Pocket Notes</h3>
-        <div className='create-notes-section'>
-            <button onClick={displayNotesName}><span className='plus-btn'>+</span> Create Notes group</button>
-            <div>
-                {/*  style={{backgroundColor:"#F7ECDC",borderRadius:"20px 0 0 20px",padding:"10px 20px"}}*/}
-                
-                
-                {groupName.map((name,idx) => {
-                    return(
-                        <div key={idx} className='notes'>
-                            <span style={{backgroundColor:name.bgColor}}>{name.inputText.slice(0,2)}</span>
-                            <strong>{name.inputText}</strong>
-                        </div>
-                    )
-                })}
-                
-                
+
+    const handleNoteSelect = (noteId) => {
+        setSelectedNote(noteId);
+    };
+
+    return (
+        <div className='notes-section-container' >
+            <h3 className='heading'>Pocket Notes</h3>
+            <div className='create-notes-section'>
+                <button onClick={displayNotesName}><span className='plus-btn'>+</span> Create Notes group</button>
+
+                <div>
+                    {groupName && groupName.map((note, idx) => {
+                        return (
+                            <div key={idx} style={{ backgroundColor: notesBgColor && selectedNote === idx ? '#F7ECDC' : '' }} className='notes' onClick={() => { console.log(idx); setNotesBgColor(true); setNoteId(idx); handleNoteSelect(idx); setActive(true); setTextInput(note.inputText); setTextSlice(note.inputText.slice(0, 2)); setTextBgColor(note.bgColor); }}>
+                                <span style={{ backgroundColor: note.bgColor }}>{note.inputText.slice(0, 2)}</span>
+                                <strong>{note.inputText}</strong>
+                            </div>
+                        )
+                    })}
+                </div>
+
             </div>
         </div>
-    </div>
-  )
+    )
 }
 
 export default NotesSection
