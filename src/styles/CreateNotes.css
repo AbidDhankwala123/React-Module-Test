@@ -92,7 +92,6 @@
 @media screen and (max-width:500px) {
     .popup-section {
         height: 12rem;
-        /* width: 100%; */
         gap: 1rem;
     }
     .popup-section>div>input{
