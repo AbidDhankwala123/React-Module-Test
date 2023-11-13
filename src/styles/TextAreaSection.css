@@ -74,16 +74,18 @@
         position: absolute;
         top: 0;
     }
-
+    .display-texts{
+        height: 50vh;
+    }
     .left-arrow {
         display: inline;
     }
 
     .textarea-container>textarea {
-        width: 90vw;
+        width: 80vw;
     }
 
     .time-date {
-        width: 28vw;
+        width: 44vw;
     }
 }
