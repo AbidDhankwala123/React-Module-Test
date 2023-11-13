@@ -14,7 +14,7 @@
     background-color: white;
     height: 12.5rem;
     width: 31.3rem;
-    padding: 1.3rem;
+    padding: 1.3rem 0 1.3rem 1.3rem;
     display: flex;
     flex-direction: column;
     gap: 1.5rem;
@@ -91,20 +91,16 @@
 
 @media screen and (max-width:500px) {
     .popup-section {
-        height: 12rem;
-        gap: 1rem;
+        height: 14rem;
     }
     .popup-section>div>input{
-        padding-left: 3px;
-        margin-left: 5px;
-        height: 1.7rem;
-        width: 9.7rem;
+        width: 11rem;
         letter-spacing: 0;
     }
     .colors{
         height: 1rem;
         width: 1rem;
-        margin-left: 7px;
+        /* margin-left: 7px; */
     }
     .popup-section>button{
         position: static;
