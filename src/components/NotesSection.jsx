@@ -1,17 +1,9 @@
 import React, { useState } from 'react'
 import "../styles/NotesSection.css"
 
-const NotesSection = ({ notesBgColor, setNotesBgColor, setNoteId, setActive, setVisible, groupName, setTextInput, setTextSlice, setTextBgColor }) => {
+const NotesSection = ({ noteId, notesBgColor, setNotesBgColor, setNoteId, setActive, setVisible, groupName, setTextInput, setTextSlice, setTextBgColor }) => {
 
-    const [selectedNote, setSelectedNote] = useState(null);
-
-    const displayNotesName = () => {
-        setVisible(true);
-    }
-
-    const handleNoteSelect = (noteId) => {
-        setSelectedNote(noteId);
-    };
+    const displayNotesName = () => setVisible(true);
 
     return (
         <div className='notes-section-container' >
@@ -22,7 +14,7 @@ const NotesSection = ({ notesBgColor, setNotesBgColor, setNoteId, setActive, set
                 <div>
                     {groupName && groupName.map((note, idx) => {
                         return (
-                            <div key={idx} style={{ backgroundColor: notesBgColor && selectedNote === idx ? '#F7ECDC' : '' }} className='notes' onClick={() => { console.log(idx); setNotesBgColor(true); setNoteId(idx); handleNoteSelect(idx); setActive(true); setTextInput(note.inputText); setTextSlice(note.inputText.slice(0, 2)); setTextBgColor(note.bgColor); }}>
+                            <div key={idx} style={{ backgroundColor: notesBgColor && noteId === idx ? '#F7ECDC' : '' }} className='notes' onClick={() => { console.log(idx); setNotesBgColor(true); setNoteId(idx); setActive(true); setTextInput(note.inputText); setTextSlice(note.inputText.slice(0, 2)); setTextBgColor(note.bgColor); }}>
                                 <span style={{ backgroundColor: note.bgColor }}>{note.inputText.slice(0, 2)}</span>
                                 <strong>{note.inputText}</strong>
                             </div>

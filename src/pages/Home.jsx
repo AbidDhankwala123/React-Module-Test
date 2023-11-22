@@ -28,7 +28,7 @@ const Home = () => {
   return (
     <>
       <div style={{ height: "100vh", display: "flex" }}>
-        <NotesSection notesBgColor={notesBgColor} setNotesBgColor={setNotesBgColor} setNoteId={setNoteId} setVisible={setVisible} setActive={setActive} groupName={groupName} bgColor={bgColor} setTextInput={setTextInput} setTextSlice={setTextSlice} setTextBgColor={setTextBgColor} />
+        <NotesSection noteId={noteId} notesBgColor={notesBgColor} setNotesBgColor={setNotesBgColor} setNoteId={setNoteId} setVisible={setVisible} setActive={setActive} groupName={groupName} bgColor={bgColor} setTextInput={setTextInput} setTextSlice={setTextSlice} setTextBgColor={setTextBgColor} />
         <RightBanner />
       </div>
 
